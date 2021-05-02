@@ -8,13 +8,17 @@ import random
 
 
 def main():
-    """
-    You should write your code for this program in this function.
-    Make sure to delete the 'pass' line before starting to write
-    your own code. You should also delete this comment and replace
-    it with a better, more descriptive one.
-    """
-    pass
+    first_integer = random.randint(MIN_VALUE, MAX_VALUE)
+    second_integer = random.randint(MIN_VALUE, MAX_VALUE)
+    user_answer = int(input("Your answer: "))
+    correct_answer = first_integer + second_integer
+
+    print("What is " + str(first_integer) + " + " + str(second_integer) + "?")
+    
+    if user_answer == correct_answer:
+        print("Correct!")
+    else:
+        print("Incorrect. The expected answer is", correct_answer)
 
 
 # This provided line is required at the end of a Python file
