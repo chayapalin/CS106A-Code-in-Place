@@ -10,11 +10,11 @@ import random
 def main():
     first_integer = random.randint(MIN_VALUE, MAX_VALUE)
     second_integer = random.randint(MIN_VALUE, MAX_VALUE)
-    user_answer = int(input("Your answer: "))
     correct_answer = first_integer + second_integer
-
     print("What is " + str(first_integer) + " + " + str(second_integer) + "?")
-    
+
+    user_answer = int(input("Your answer: "))
+
     if user_answer == correct_answer:
         print("Correct!")
     else:
