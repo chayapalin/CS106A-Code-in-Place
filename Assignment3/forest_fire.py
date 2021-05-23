@@ -24,7 +24,19 @@ def find_flames(filename):
     in order to highlight areas of wildfires.
     """
     image = SimpleImage(filename)
-    # TODO: your code here
+    
+    for pixel in image:
+        average = (pixel.red + pixel.green + pixel.blue) // 3
+        # See if this pixel is "sufficiently" red
+        if pixel.red >= average * INTENSITY_THRESHOLD:
+            pixel.red = 255
+            pixel.green = 0
+            pixel.blue = 0
+        else:
+            pixel.red = average
+            pixel.green = average
+            pixel.blue = average
+    
     return image
 
 def main():
